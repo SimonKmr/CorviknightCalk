@@ -29,12 +29,12 @@ namespace CorviknightCalk
             
             InitializeComponent();
             ParticularPokemon[] pokemon = new ParticularPokemon[6];
-            PokemonUI[] userControls = new PokemonUI[6];
+            PokemonUIPanel[] userControls = new PokemonUIPanel[6];
             StackPanel stackPanel = new StackPanel();
 
             for (int i = 0; i < 6; i++)
             {
-                userControls[i] = new PokemonUI(new ParticularPokemon() { Name = "Simon" });
+                userControls[i] = new PokemonUIPanel(new ParticularPokemon());
 
                 if (i % 2 == 0) StackPanelLeft.Children.Add(userControls[i]);
                 else StackPanelRight.Children.Add(userControls[i]);
@@ -47,10 +47,7 @@ namespace CorviknightCalk
             =>Close();
 
         private void btnTeam_Click(object sender, RoutedEventArgs e)
-        {
-            tcMainPage.SelectedIndex = 0;
-            Team.Pokemon[0].PPokemon.Name = "Monty";
-        }
+            => tcMainPage.SelectedIndex = 0;
         private void btnTypes_Click(object sender, RoutedEventArgs e)
             => tcMainPage.SelectedIndex = 1;
         private void btnMatchups_Click(object sender, RoutedEventArgs e)

@@ -9,7 +9,7 @@ namespace CorviknightCalk.Tabs
 {
     public class TeamBuilder : TabLayout
     {
-        public PokemonUI[] Pokemon { get; set; } = new PokemonUI[6];
+        public PokemonUIPanel[] Pokemon { get; set; } = new PokemonUIPanel[6];
         public TeamBuilder()
         {
             PageName = "Team";

@@ -1,0 +1,21 @@
+﻿<Window x:Class="CorviknightCalk.Tabs.Team.PokemonSettingsWindow"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CorviknightCalk"
+        mc:Ignorable="d"
+        Title="PokemonSettingsWindow" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid.Resources>
+            <Style TargetType="AccessText">
+                <Setter Property="FontFamily" Value="Franklin Gothic"/>
+            </Style>
+            <Style TargetType="Label" x:Key="Title">
+
+            </Style>
+        </Grid.Resources>
+        <TextBlock FontSize="28" FontWeight="ExtraBold" HorizontalAlignment="Center" Text="{Binding PPokemon.Name}"/>
+    </Grid>
+</Window>

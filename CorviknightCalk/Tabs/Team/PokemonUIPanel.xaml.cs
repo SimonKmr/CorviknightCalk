@@ -1,4 +1,5 @@
 ﻿using CorviknightCalk.PokemonEntity;
+using CorviknightCalk.Tabs.Team;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,32 +21,23 @@ namespace CorviknightCalk
     /// <summary>
     /// Interaktionslogik für PokemonTeamUI.xaml
     /// </summary>
-    public partial class PokemonUI
+    public partial class PokemonUIPanel
     {
         public ParticularPokemon PPokemon { get; set; }
         public String PkmnTypeIcon1 { get; set; }
         public String PkmnTypeIcon2 { get; set; }
         public String PkmnImage { get; set; }
 
-        public PokemonUI(ParticularPokemon pPokemon)
+        public PokemonUIPanel(ParticularPokemon pPokemon)
         {
             this.PPokemon = pPokemon;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-         => MessageBox.Show("Yeah! This is still Work in Progress");//Create a Editor window and link it to here
-        //Ich sollte dem neuen fenster mit this dieses Hier übergeben, sodass ich von dort so die sachen verändern kann.
-
-    }
-
-    public class PokemonDesigner
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void NotifyPropertyChanged(string propName)
         {
-            if (this.PropertyChanged != null)
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            PokemonSettingsWindow pokemonSettingsWindow = new PokemonSettingsWindow(PPokemon);
+            pokemonSettingsWindow.Show();
         }
     }
 }

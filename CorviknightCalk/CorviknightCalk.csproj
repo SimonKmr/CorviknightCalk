@@ -76,14 +76,16 @@
     </ApplicationDefinition>
     <Compile Include="PokemonEntity\ParticularPokemon.cs" />
     <Compile Include="PokemonEntity\GeneralPokemon.cs" />
-    <Compile Include="Tabs\Team\PokemonUI.xaml.cs">
-      <DependentUpon>PokemonUI.xaml</DependentUpon>
+    <Compile Include="Tabs\Team\PokemonSettingsWindow.xaml.cs">
+      <DependentUpon>PokemonSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Team\PokemonUIPanel.xaml.cs">
+      <DependentUpon>PokemonUIPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tables\PokemonTable.cs" />
     <Compile Include="Tables\PokemonTypes.cs" />
     <Compile Include="Tabs\Matchups.cs" />
     <Compile Include="Tabs\TabLayout.cs" />
-    <Compile Include="Tabs\TabManager.cs" />
     <Compile Include="Tabs\Team\TeamBuilder.cs" />
     <Compile Include="Tabs\TypesStats.cs" />
     <Page Include="MainWindow.xaml">
@@ -98,7 +100,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Tabs\Team\PokemonUI.xaml">
+    <Page Include="Tabs\Team\PokemonSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\Team\PokemonUIPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

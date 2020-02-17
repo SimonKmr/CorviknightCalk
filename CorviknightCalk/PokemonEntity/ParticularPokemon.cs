@@ -12,6 +12,15 @@ namespace CorviknightCalk.PokemonEntity
         public int ItemID { get; set; }
         public int AbilityID { get; set; }
         public new ParticularPokemonStats Stats { get; set; }
+
+        public GeneralPokemon General2ParticularPkmn(ParticularPokemon pokemon)
+        {
+            GeneralPokemon generalPokemon = new GeneralPokemon();
+
+
+
+            return generalPokemon;
+        }
     }
 
     public class ParticularPokemonStats
