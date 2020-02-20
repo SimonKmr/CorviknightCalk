@@ -17,7 +17,7 @@
                         <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
-                <Image HorizontalAlignment="Left" Width="119" Source="{Binding PPokemon.ImgLink}" Stretch="Uniform" Height="120" Name="pkmnImage" />
+                <Image HorizontalAlignment="Left" Width="119" Source="{Binding PPokemon.ImgSource.ImgPkmn}" Stretch="Uniform" Height="120" Name="PkmnImage" />
             </Button>
             <StackPanel Width="160" HorizontalAlignment="Right">
                 <StackPanel.Resources>
@@ -38,8 +38,8 @@
                             <Setter Property="Margin" Value="1"/>
                         </Style>
                     </StackPanel.Resources>
-                    <Image Source="{Binding pkmnTypeIcon1}" Name="pkmnType1"/>
-                    <Image Source="{Binding pkmnTypeIcon2}" Name="pkmnType2"/>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}"/>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Width="Auto">
                     <StackPanel.Resources>

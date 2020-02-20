@@ -32,6 +32,13 @@ namespace CorviknightCalk
             PokemonUIPanel[] userControls = new PokemonUIPanel[6];
             StackPanel stackPanel = new StackPanel();
 
+            //sollte ich noch umbennen das "btn am anfang könnte verwirren"
+            //Sets the button Icons
+            Icon_btnExit.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Exit.png"));
+            Icon_btnTeam.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Team.png"));
+            Icon_btnTypes.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Types.png"));
+            Icon_btnMatchups.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Matchups.png"));
+
             for (int i = 0; i < 6; i++)
             {
                 userControls[i] = new PokemonUIPanel(new ParticularPokemon());
@@ -43,9 +50,11 @@ namespace CorviknightCalk
             this.pokemonTeamGrid.Children.Add(stackPanel);
         }
 
+        //Exit Button
         private void btnExit_Click(object sender, RoutedEventArgs e)
             =>Close();
 
+        //Sidebar menu control 
         private void btnTeam_Click(object sender, RoutedEventArgs e)
             => tcMainPage.SelectedIndex = 0;
         private void btnTypes_Click(object sender, RoutedEventArgs e)

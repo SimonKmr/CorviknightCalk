@@ -137,35 +137,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\Icon_Matchups.png" />
-    <Resource Include="Icons\Icon_Stats.png" />
-    <Resource Include="Icons\Icon_Team.png" />
-    <Resource Include="Icons\Icon_Types.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\Icon_Exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\IconTypes\bug.png" />
-    <Resource Include="Icons\IconTypes\dark.png" />
-    <Resource Include="Icons\IconTypes\dragon.png" />
-    <Resource Include="Icons\IconTypes\electric.png" />
-    <Resource Include="Icons\IconTypes\fairy.png" />
-    <Resource Include="Icons\IconTypes\fighting.png" />
-    <Resource Include="Icons\IconTypes\fire.png" />
-    <Resource Include="Icons\IconTypes\flying.png" />
-    <Resource Include="Icons\IconTypes\ghost.png" />
-    <Resource Include="Icons\IconTypes\grass.png" />
-    <Resource Include="Icons\IconTypes\ground.png" />
-    <Resource Include="Icons\IconTypes\ice.png" />
-    <Resource Include="Icons\IconTypes\normal.png" />
-    <Resource Include="Icons\IconTypes\poison.png" />
-    <Resource Include="Icons\IconTypes\psychic.png" />
-    <Resource Include="Icons\IconTypes\rock.png" />
-    <Resource Include="Icons\IconTypes\steel.png" />
-    <Resource Include="Icons\IconTypes\water.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 und x64%29</ProductName>

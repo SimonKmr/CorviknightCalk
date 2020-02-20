@@ -65,21 +65,21 @@
                     <!-- Button For Teammanager window-->
                     <Button Click="btnTeam_Click">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Source="Icons/icon_Team.png"/>
+                            <Image Name="Icon_btnTeam"/>
                             <Label>Team</Label>
                         </StackPanel>
                     </Button>
                     <!-- Button For the Type and Stats window-->
                     <Button Click="btnTypes_Click">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Source="Icons/icon_Types.png"/>
+                            <Image Name="Icon_btnTypes"/>
                             <Label>Types &amp; Stats</Label>
                         </StackPanel>
                     </Button>
                     <!-- Button For Matchup window-->
                     <Button Click="btnMatchups_Click">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Source="Icons/icon_Matchups.png"/>
+                            <Image Name="Icon_btnMatchups"/>
                             <Label>Matchups</Label>
                         </StackPanel>
                     </Button>
@@ -88,7 +88,7 @@
         </Grid>
         <!-- Exit Button -->
         <Button Background="Transparent" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0" Click="btnExit_Click">
-            <Image Source="Icons/icon_Exit.png" Height="18" Width="18" Stretch="Uniform" RenderTransformOrigin="0.517,0.483"></Image>
+            <Image Name="Icon_btnExit" Height="18" Width="18" Stretch="Uniform" RenderTransformOrigin="0.517,0.483"></Image>
         </Button>
         <!-- the actual pages -->
         <TabControl Margin="200,40,0,0"  Name="tcMainPage">

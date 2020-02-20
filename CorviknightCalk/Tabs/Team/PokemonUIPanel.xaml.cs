@@ -24,9 +24,10 @@ namespace CorviknightCalk
     public partial class PokemonUIPanel
     {
         public ParticularPokemon PPokemon { get; set; }
+
+
         public String PkmnTypeIcon1 { get; set; }
         public String PkmnTypeIcon2 { get; set; }
-        public String PkmnImage { get; set; }
 
         public PokemonUIPanel(ParticularPokemon pPokemon)
         {

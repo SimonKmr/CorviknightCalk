@@ -21,6 +21,7 @@ namespace CorviknightCalk.Tabs.Team
     public partial class PokemonSettingsWindow : Window
     {
         public ParticularPokemon PPokemon { get; set; }
+        public ImageSources PPokemonSources { get; set; }
         PokemonTable pokemonTable;
 
         ComboBox cbPokemonSelection = new ComboBox();
@@ -28,6 +29,7 @@ namespace CorviknightCalk.Tabs.Team
         {
             pokemonTable = new PokemonTable();
             PPokemon = ppokemon;
+            PPokemonSources = ppokemon.ImgSource;
 
             InitializeComponent();
             cbPokemonSelection.ItemsSource = pokemonTable.GetNames();
@@ -46,8 +48,7 @@ namespace CorviknightCalk.Tabs.Team
 
         private void OnMyComboBoxChanged(object sender, SelectionChangedEventArgs e)
         {
-            PPokemon.Name = pokemonTable.GetPokemon((sender as ComboBox).SelectedIndex+1, 0).Name;
-            PPokemon.ID = pokemonTable.GetPokemon((sender as ComboBox).SelectedIndex + 1, 0).ID;
+            PPokemon.General2ParticularPkmn(pokemonTable.GetPokemon((sender as ComboBox).SelectedIndex + 1, 0));
         }
     }
 }
