@@ -6,6 +6,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CorviknightCalk"
              mc:Ignorable="d" Height="125" Width="285">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AttributeRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <StackPanel HorizontalAlignment="Left" Height="125"  VerticalAlignment="Top" Width="285" >
         <Grid HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="285" >
             <Grid.ColumnDefinitions>
@@ -47,36 +54,23 @@
                             <Setter Property="Orientation" Value="Horizontal"/>
                             <Setter Property="HorizontalAlignment" Value="Center"/>
                         </Style>
-                        <Style TargetType="{x:Type TextBlock}" x:Key="Title">
-                            <Setter Property="FontFamily" Value="Franklin Gothic Thin"/>
-                            <Setter Property="FontSize" Value="10"/>
-                            <Setter Property="Foreground" Value="#808080"/>
-                            <Setter Property="VerticalAlignment" Value="Center"/>
-                            <Setter Property="Height" Value="Auto"/>
-                        </Style>
-                        <Style TargetType="{x:Type TextBlock}" x:Key="Name">
-                            <Setter Property="Margin" Value="5,0"/>
-                            <Setter Property="Foreground" Value="#303030"/>
-                            <Setter Property="FontSize" Value="15"/>
-                            <Setter Property="FontWeight" Value="Medium"/>
-                        </Style>
                     </StackPanel.Resources>
                     <StackPanel Width="Auto">
                         <StackPanel Style="{StaticResource Infos}">
-                            <TextBlock Style="{StaticResource Title}"><Run Text="Weight:"/></TextBlock>
-                            <TextBlock Style="{StaticResource Name}"><Run Text="{Binding PPokemon.Weight}"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Weight:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.Weight}"/></TextBlock>
                         </StackPanel>
                         <StackPanel Style="{StaticResource Infos}">
-                            <TextBlock Style="{StaticResource Title}"><Run Text="Height:"/></TextBlock>
-                            <TextBlock Style="{StaticResource Name}"><Run Text="{Binding PPokemon.Height}" Name="pkmnHeight"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Height:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.Height}" Name="pkmnHeight"/></TextBlock>
                         </StackPanel>
                         <StackPanel Style="{StaticResource Infos}">
-                            <TextBlock Style="{StaticResource Title}"><Run Text="Ability:"/></TextBlock>
-                            <TextBlock Style="{StaticResource Name}"><Run Text="{Binding PPokemon.AbilityID}" Name="pkmnAbility"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Ability:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.AbilityName}" Name="pkmnAbility"/></TextBlock>
                         </StackPanel>
                         <StackPanel Style="{StaticResource Infos}">
-                            <TextBlock Style="{StaticResource Title}"><Run Text="Item:"/></TextBlock>
-                            <TextBlock Style="{StaticResource Name}"><Run Text="{Binding PPokemon.ItemID}" Name="pkmnItem"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Item:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.ItemName}" Name="pkmnItem"/></TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>

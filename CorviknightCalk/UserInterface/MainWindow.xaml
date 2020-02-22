@@ -10,6 +10,13 @@
         xmlns:local="clr-namespace:CorviknightCalk"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MenuRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <!-- Makes the thing dragable like a normal window-->
         <Border 
@@ -38,49 +45,25 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="5,0">
-                    <StackPanel.Resources>
-                        <Style TargetType="Button">
-                            <Setter Property="Height" Value="40"/>
-                            <Setter Property="Background" Value="Transparent"/>
-                            <Setter Property="BorderThickness" Value="0"/>
-                        </Style>
-                        <Style TargetType="StackPanel">
-                            <Setter Property="Width" Value="200"/>
-                            <Setter Property="VerticalAlignment" Value="Top"/>
-                        </Style>
-                        <Style TargetType="Label">
-                            <Setter Property="FontSize" Value="20"/>
-                            <Setter Property="FontFamily" Value="Franklin Gothic Demi"/>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                            <Setter Property="Height" Value="auto"/>
-                        </Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Width" Value="20"/>
-                            <Setter Property="Height" Value="20"/>
-                            <Setter Property="Stretch" Value="Fill"/>
-                            <Setter Property="HorizontalAlignment" Value="Left"/>
-                        </Style>
-                    </StackPanel.Resources>
                     <!-- Button For Teammanager window-->
-                    <Button Click="btnTeam_Click">
+                    <Button Click="btnTeam_Click" Style="{StaticResource MenuButton}">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Name="Icon_btnTeam"/>
-                            <Label>Team</Label>
+                            <Image Name="Icon_btnTeam" Style="{StaticResource MenuImage}"/>
+                            <Label Style="{StaticResource MenuLabel}">Team</Label>
                         </StackPanel>
                     </Button>
                     <!-- Button For the Type and Stats window-->
-                    <Button Click="btnTypes_Click">
+                    <Button Click="btnTypes_Click" Style="{StaticResource MenuButton}">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Name="Icon_btnTypes"/>
-                            <Label>Types &amp; Stats</Label>
+                            <Image Name="Icon_btnTypes"  Style="{StaticResource MenuImage}"/>
+                            <Label Style="{StaticResource MenuLabel}">Types &amp; Stats</Label>
                         </StackPanel>
                     </Button>
                     <!-- Button For Matchup window-->
-                    <Button Click="btnMatchups_Click">
+                    <Button Click="btnMatchups_Click" Style="{StaticResource MenuButton}">
                         <StackPanel Orientation="Horizontal" Width="200">
-                            <Image Name="Icon_btnMatchups"/>
-                            <Label>Matchups</Label>
+                            <Image Name="Icon_btnMatchups"  Style="{StaticResource MenuImage}"/>
+                            <Label Style="{StaticResource MenuLabel}">Matchups</Label>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -103,13 +86,7 @@
             </TabControl.Resources>
             <TabItem Header="Team">
                 <Grid xmlns:c="clr-namespace:CorviknightCalk.Tabs" Name="pokemonTeamGrid">
-                    <Grid.Resources>
-                        <c:TeamBuilder x:Key="pageData.PageName"/>
-                    </Grid.Resources>
-                    <Grid.DataContext>
-                        <Binding Source="{StaticResource pageData.PageName}"/>
-                    </Grid.DataContext>
-                    <Label Content="{Binding PageName}" FontFamily="Franklin Gothic Demi" FontSize="48"/>
+                    <Label Content="Team" FontFamily="Franklin Gothic Demi" FontSize="48"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel.Resources>
                             <Style TargetType="local:PokemonUIPanel">
@@ -125,13 +102,7 @@
             </TabItem>
             <TabItem Header="Types">
                 <Grid xmlns:c="clr-namespace:CorviknightCalk.Tabs">
-                    <Grid.Resources>
-                        <c:TypesStats x:Key="pageData.PageName"/>
-                    </Grid.Resources>
-                    <Grid.DataContext>
-                        <Binding Source="{StaticResource pageData.PageName}"/>
-                    </Grid.DataContext>
-                    <Label Content="{Binding PageName}" FontFamily="Franklin Gothic Demi" FontSize="48"/>
+                    <Label Content="Types &amp; Matchups" FontFamily="Franklin Gothic Demi" FontSize="48"/>
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                         <StackPanel.Resources>
                             <Style TargetType="DataGrid">
@@ -147,12 +118,7 @@
             </TabItem>
             <TabItem Header="Matchups">
                 <Grid xmlns:c="clr-namespace:CorviknightCalk.Tabs">
-                    <Grid.Resources>
-                        <c:Matchups x:Key="pageData.PageName"/>
-                    </Grid.Resources>
-                    <Grid.DataContext>
-                        <Binding Source="{StaticResource pageData.PageName}"/>
-                    </Grid.DataContext>
+
                     <Label Content="{Binding PageName}" FontFamily="Franklin Gothic Demi" FontSize="48"/>
                 </Grid>
             </TabItem>

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CorviknightCalk.PokemonEntity;
 
 namespace CorviknightCalk.Tabs
 {
-    class Matchups : TabLayout
+    public class TeamBuilder
     {
-        public Matchups()
-        {
-            PageName = "Matchups";
-        }
+        public PokemonUIPanel[] Pokemon { get; set; } = new PokemonUIPanel[6];
+        
     }
 }

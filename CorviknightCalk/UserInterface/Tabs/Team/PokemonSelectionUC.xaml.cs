@@ -25,10 +25,6 @@ namespace CorviknightCalk
     {
         public ParticularPokemon PPokemon { get; set; }
 
-
-        public String PkmnTypeIcon1 { get; set; }
-        public String PkmnTypeIcon2 { get; set; }
-
         public PokemonUIPanel(ParticularPokemon pPokemon)
         {
             this.PPokemon = pPokemon;

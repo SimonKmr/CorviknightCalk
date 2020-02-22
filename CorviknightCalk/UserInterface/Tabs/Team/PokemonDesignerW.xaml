@@ -1,0 +1,59 @@
+﻿<Window x:Class="CorviknightCalk.Tabs.Team.PokemonSettingsWindow"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:CorviknightCalk"
+        mc:Ignorable="d"
+        Title="PokemonSettingsWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AttributeRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Name="MainGrid">
+        <Grid Width="200" HorizontalAlignment="Left" Background="#151515">
+            <StackPanel Margin="10" VerticalAlignment="Center">
+                <!-- Pokemon General -->
+                <TextBlock FontSize="28" FontWeight="ExtraBold"  Text="{Binding PPokemon.Name}" TextAlignment="Center" Foreground="White"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2" Width="Auto">
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}" Margin="2" Height="18"/>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}" Margin="2" Height="18"/>
+                </StackPanel>
+                <Image Height="180" Source="{Binding PPokemon.ImgSource.ImgPkmn}"/>
+                <TextBlock Style="{StaticResource AttributName}">Pokemon</TextBlock>
+                <ComboBox  VerticalAlignment="Top" Width="auto" Name="cbPokemonSelection"/>
+            </StackPanel>
+            <StackPanel Margin="233,106,-233,89" >
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Hp:</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[1].BaseValue}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Attack:</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[1].BaseValue}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Defense:</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[2].BaseValue}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Sp.Attack:</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[3].BaseValue}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Sp.Defense</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[4].BaseValue}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Style="{StaticResource AttributName}">Speed</TextBlock>
+                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[5].BaseValue}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

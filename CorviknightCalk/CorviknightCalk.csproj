@@ -76,19 +76,19 @@
     </ApplicationDefinition>
     <Compile Include="PokemonEntity\ParticularPokemon.cs" />
     <Compile Include="PokemonEntity\GeneralPokemon.cs" />
-    <Compile Include="Tabs\Team\PokemonSettingsWindow.xaml.cs">
-      <DependentUpon>PokemonSettingsWindow.xaml</DependentUpon>
+    <Compile Include="UserInterface\Tabs\Team\PokemonDesignerW.xaml.cs">
+      <DependentUpon>PokemonDesignerW.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\Team\PokemonUIPanel.xaml.cs">
-      <DependentUpon>PokemonUIPanel.xaml</DependentUpon>
+    <Compile Include="UserInterface\Tabs\Team\PokemonSelectionUC.xaml.cs">
+      <DependentUpon>PokemonSelectionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tables\PokemonTable.cs" />
     <Compile Include="Tables\PokemonTypes.cs" />
-    <Compile Include="Tabs\Matchups.cs" />
-    <Compile Include="Tabs\TabLayout.cs" />
-    <Compile Include="Tabs\Team\TeamBuilder.cs" />
-    <Compile Include="Tabs\TypesStats.cs" />
-    <Page Include="MainWindow.xaml">
+    <Compile Include="UserInterface\Tabs\Team\TeamBuilder.cs" />
+    <Compile Include="UserInterface\Tabs\Team\TeamP.xaml.cs">
+      <DependentUpon>TeamP.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserInterface\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -96,15 +96,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="UserInterface\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Tabs\Team\PokemonSettingsWindow.xaml">
+    <Page Include="UserInterface\MenuRD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserInterface\Tabs\Team\AttributeRD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tabs\Team\PokemonUIPanel.xaml">
+    <Page Include="UserInterface\Tabs\Team\PokemonDesignerW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserInterface\Tabs\Team\PokemonSelectionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserInterface\Tabs\Team\TeamP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +159,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserInterface\Tabs\Matchups\" />
+    <Folder Include="UserInterface\Tabs\Stats\" />
+    <Folder Include="UserInterface\Tabs\Team\PokemonDesigner\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -103,7 +103,7 @@ namespace CorviknightCalk.PokemonEntity
 
         public ObservableCollection<int> AbilityIDs { get; set; }
         public ObservableCollection<int> MoveIDs { get; set; }
-        public GeneralPokemonStats Stats { get; set; }
+        public ObservableCollection<GeneralPokemonStats> Stats { get; set; }
 
 
 
@@ -127,11 +127,23 @@ namespace CorviknightCalk.PokemonEntity
         }
     }
 
-    public class GeneralPokemonStats
+    public class GeneralPokemonStats : INotifyPropertyChanged
     {
-        enum Stats { Hp, Atk, Def, SpAtk, SpDef, Speed }
+        private int baseValue;
+        public int BaseValue { get { return baseValue; }
+            set 
+            {
+                this.baseValue = value;
+                this.NotifyPropertyChanged("BaseValue");
+            } 
+        }
 
-        public ObservableCollection<int> BaseValues { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
     }
 
     public class ImageSources : INotifyPropertyChanged

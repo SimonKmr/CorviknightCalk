@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CorviknightCalk.PokemonEntity;
 using CorviknightCalk.Tabs;
+using CorviknightCalk.Tabs.Team;
 
 namespace CorviknightCalk
 {
@@ -29,8 +30,6 @@ namespace CorviknightCalk
             
             InitializeComponent();
             ParticularPokemon[] pokemon = new ParticularPokemon[6];
-            PokemonUIPanel[] userControls = new PokemonUIPanel[6];
-            StackPanel stackPanel = new StackPanel();
 
             //sollte ich noch umbennen das "btn am anfang könnte verwirren"
             //Sets the button Icons
@@ -39,6 +38,8 @@ namespace CorviknightCalk
             Icon_btnTypes.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Types.png"));
             Icon_btnMatchups.Source = new BitmapImage(new Uri("https://raw.githubusercontent.com/SimonKmr/CorviknightCalk/master/Icons/Icon_Matchups.png"));
 
+            StackPanel stackPanel = new StackPanel();
+            PokemonUIPanel[] userControls = new PokemonUIPanel[6];
             for (int i = 0; i < 6; i++)
             {
                 userControls[i] = new PokemonUIPanel(new ParticularPokemon());
