@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="CorviknightCalk.UserInterface.Team.TeamView2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CorviknightCalk.UserInterface.Team"
+             xmlns:panel="clr-namespace:CorviknightCalk"
+             mc:Ignorable="d" 
+             d:DesignHeight="680" d:DesignWidth="1080">
+    <Grid Name="pokemonTeamGrid">
+            <Label Content="Team" FontFamily="Franklin Gothic Demi" FontSize="48" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="panel:PokemonUIPanel">
+                        <Setter Property="Margin" Value="20"/>
+                    </Style>
+                </StackPanel.Resources>
+                <StackPanel Name="StackPanelLeft">
+                </StackPanel>
+                <StackPanel Name="StackPanelRight">
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+</UserControl>

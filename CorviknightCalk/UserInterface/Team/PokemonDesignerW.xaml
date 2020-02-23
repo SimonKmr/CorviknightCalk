@@ -11,27 +11,24 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/CorviknightCalk;component/UserInterface/Style/AttributeRD.xaml"/>
+                <ResourceDictionary Source="AttributeRD.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
     <Grid Name="MainGrid">
-        <DockPanel>
-            <Grid Width="200" Background="#151515" DockPanel.Dock="Left">
-                <StackPanel Margin="10" VerticalAlignment="Center">
-                    <!-- Pokemon General -->
-                    <TextBlock FontSize="28" FontWeight="ExtraBold"  Text="{Binding PPokemon.Name}" TextAlignment="Center" Foreground="White"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2" Width="Auto">
-                        <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}" Margin="2" Height="18"/>
-                        <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}" Margin="2" Height="18"/>
-                    </StackPanel>
-                    <Image Height="180" Source="{Binding PPokemon.ImgSource.ImgPkmn}"/>
-                    <TextBlock Style="{StaticResource AttributName}">Pokemon</TextBlock>
-                    <ComboBox  VerticalAlignment="Top" Width="auto" Name="cbPokemonSelection"/>
+        <Grid Width="200" HorizontalAlignment="Left" Background="#151515">
+            <StackPanel Margin="10" VerticalAlignment="Center">
+                <!-- Pokemon General -->
+                <TextBlock FontSize="28" FontWeight="ExtraBold"  Text="{Binding PPokemon.Name}" TextAlignment="Center" Foreground="White"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2" Width="Auto">
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}" Margin="2" Height="18"/>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}" Margin="2" Height="18"/>
                 </StackPanel>
-            </Grid>
-            <Grid Width="200" Margin="20" HorizontalAlignment="Left">
-                <StackPanel  VerticalAlignment="Center" >
+                <Image Height="180" Source="{Binding PPokemon.ImgSource.ImgPkmn}"/>
+                <TextBlock Style="{StaticResource AttributName}">Pokemon</TextBlock>
+                <ComboBox  VerticalAlignment="Top" Width="auto" Name="cbPokemonSelection"/>
+            </StackPanel>
+            <StackPanel Margin="233,106,-233,89" >
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Hp:</TextBlock>
                     <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[0].BaseValue}"/>
@@ -57,7 +54,6 @@
                     <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[5].BaseValue}"/>
                 </StackPanel>
             </StackPanel>
-            </Grid>
-        </DockPanel>
+        </Grid>
     </Grid>
 </Window>

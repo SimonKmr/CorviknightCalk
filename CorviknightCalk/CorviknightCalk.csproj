@@ -79,14 +79,13 @@
     <Compile Include="UserInterface\Tabs\Team\PokemonDesignerW.xaml.cs">
       <DependentUpon>PokemonDesignerW.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\Tabs\Team\PokemonSelectionUC.xaml.cs">
-      <DependentUpon>PokemonSelectionUC.xaml</DependentUpon>
+    <Compile Include="UserInterface\Tabs\Team\PokemonPreviewUC.xaml.cs">
+      <DependentUpon>PokemonPreviewUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tables\PokemonTable.cs" />
     <Compile Include="Tables\PokemonTypes.cs" />
-    <Compile Include="UserInterface\Tabs\Team\TeamBuilder.cs" />
-    <Compile Include="UserInterface\Tabs\Team\TeamP.xaml.cs">
-      <DependentUpon>TeamP.xaml</DependentUpon>
+    <Compile Include="UserInterface\Tabs\Team\TeamPage.xaml.cs">
+      <DependentUpon>TeamPage.xaml</DependentUpon>
     </Compile>
     <Page Include="UserInterface\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -100,11 +99,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserInterface\MenuRD.xaml">
+    <Page Include="UserInterface\Style\BaseRD.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserInterface\Tabs\Team\AttributeRD.xaml">
+    <Page Include="UserInterface\Style\AttributeRD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,11 +111,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserInterface\Tabs\Team\PokemonSelectionUC.xaml">
+    <Page Include="UserInterface\Tabs\Team\PokemonPreviewUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserInterface\Tabs\Team\TeamP.xaml">
+    <Page Include="UserInterface\Tabs\Team\TeamPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

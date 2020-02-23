@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CorviknightCalk.UserInterface.Tabs.Team
+namespace CorviknightCalk.UserInterface.Team
 {
     /// <summary>
-    /// Interaktionslogik für TeamP.xaml
+    /// Interaktionslogik für TeamView.xaml
     /// </summary>
-    public partial class TeamP : Page
+    public partial class TeamView : UserControl
     {
-        public TeamP()
+        public TeamView()
         {
             InitializeComponent();
         }

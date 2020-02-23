@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="CorviknightCalk.PokemonUIPanel"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CorviknightCalk"
+             mc:Ignorable="d" Height="125" Width="285">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AttributeRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel HorizontalAlignment="Left" Height="125"  VerticalAlignment="Top" Width="285" >
+        <Grid HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="285" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Width="125" HorizontalAlignment="Left" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Image HorizontalAlignment="Left" Width="119" Source="{Binding PPokemon.ImgSource.ImgPkmn}" Stretch="Uniform" Height="120" Name="PkmnImage" />
+            </Button>
+            <StackPanel Width="160" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="FontFamily" Value="Franklin Gothic Thin"/>
+                        <Setter Property="FontSize" Value="8"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock FontSize="23" FontWeight="ExtraBold" HorizontalAlignment="Center" Text="{Binding PPokemon.Name}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Margin" Value="2"/>
+                        </Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Height" Value="15"/>
+                            <Setter Property="Margin" Value="1"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}"/>
+                    <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Width="Auto">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type StackPanel}" x:Key="Infos">
+                            <Setter Property="Orientation" Value="Horizontal"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Width="Auto">
+                        <StackPanel Style="{StaticResource Infos}">
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Ability:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.AbilityName}" Name="pkmnAbility"/></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource Infos}">
+                            <TextBlock Style="{StaticResource AttributName}"><Run Text="Item:"/></TextBlock>
+                            <TextBlock Style="{StaticResource AttributeValue}"><Run Text="{Binding PPokemon.ItemName}" Name="pkmnItem"/></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</UserControl>
