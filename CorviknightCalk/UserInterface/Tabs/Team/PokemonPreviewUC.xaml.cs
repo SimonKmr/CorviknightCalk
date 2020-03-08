@@ -23,9 +23,9 @@ namespace CorviknightCalk
     /// </summary>
     public partial class PokemonPreviewUC
     {
-        public ParticularPokemon PPokemon { get; set; }
+        public ParticularE PPokemon { get; set; }
 
-        public PokemonPreviewUC(ParticularPokemon pPokemon)
+        public PokemonPreviewUC(ParticularE pPokemon)
         {
             this.PPokemon = pPokemon;
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace CorviknightCalk
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PokemonSettingsWindow pokemonSettingsWindow = new PokemonSettingsWindow(PPokemon);
+            SettingsWindow pokemonSettingsWindow = new SettingsWindow(PPokemon);
             pokemonSettingsWindow.Show();
         }
     }

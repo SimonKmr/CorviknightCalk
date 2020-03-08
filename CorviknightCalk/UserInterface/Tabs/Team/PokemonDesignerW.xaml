@@ -1,4 +1,4 @@
-﻿<Window x:Class="CorviknightCalk.Tabs.Team.PokemonSettingsWindow"
+﻿<Window x:Class="CorviknightCalk.Tabs.Team.SettingsWindow"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -20,12 +20,12 @@
             <Grid Width="200" Background="#151515" DockPanel.Dock="Left">
                 <StackPanel Margin="10" VerticalAlignment="Center">
                     <!-- Pokemon General -->
-                    <TextBlock FontSize="28" FontWeight="ExtraBold"  Text="{Binding PPokemon.Name}" TextAlignment="Center" Foreground="White"/>
+                    <TextBlock FontSize="28" FontWeight="ExtraBold"  Text="{Binding particularP.Name}" TextAlignment="Center" Foreground="White"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2" Width="Auto">
-                        <Image Source="{Binding PPokemon.ImgSource.ImgType[0]}" Margin="2" Height="18"/>
-                        <Image Source="{Binding PPokemon.ImgSource.ImgType[1]}" Margin="2" Height="18"/>
+                        <Image Source="{Binding particularP.ImgSource.ImgType[0]}" Margin="2" Height="18"/>
+                        <Image Source="{Binding particularP.ImgSource.ImgType[1]}" Margin="2" Height="18"/>
                     </StackPanel>
-                    <Image Height="180" Source="{Binding PPokemon.ImgSource.ImgPkmn}"/>
+                    <Image Height="180" Source="{Binding particularP.ImgSource.ImgPkmn}"/>
                     <TextBlock Style="{StaticResource AttributName}">Pokemon</TextBlock>
                     <ComboBox  VerticalAlignment="Top" Width="auto" Name="cbPokemonSelection"/>
                 </StackPanel>
@@ -34,27 +34,27 @@
                 <StackPanel  VerticalAlignment="Center" >
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Hp:</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[0].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[0].BaseValue}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Attack:</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[1].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[1].BaseValue}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Defense:</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[2].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[2].BaseValue}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Sp.Attack:</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[3].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[3].BaseValue}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Sp.Defense</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[4].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[4].BaseValue}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock Style="{StaticResource AttributName}">Speed</TextBlock>
-                    <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding PPokemon.Stats[5].BaseValue}"/>
+                        <TextBlock Style="{StaticResource AttributeValue}" Text="{Binding particularP.Stats[5].BaseValue}"/>
                 </StackPanel>
             </StackPanel>
             </Grid>

@@ -8,29 +8,33 @@ using System.Collections.Generic;
 
 namespace CorviknightCalk
 {
-    class PokemonTable
+    class EntitiesT
     {
         // this class is responsible for calculating damage modifires based on pokemon types
-        List<GeneralPokemon> pokemons { get; set; } = new List<GeneralPokemon>();
+        List<GeneralE> pokemons { get; set; } = new List<GeneralE>();
 
-        public PokemonTable()
+        public EntitiesT()
         {
-            LoadList();
+            LoadList(new FileInfo(Assembly.GetEntryAssembly().Location).Directory.ToString() + @"\PokemonTables");
         }
-        public void LoadList()
+        public EntitiesT(string path)
+        {
+            LoadList(path);
+        }
+        private void LoadList(string path)
         {
             //loads the typeTable
-            string[] files = Directory.GetFiles(new FileInfo(Assembly.GetEntryAssembly().Location).Directory.ToString()+@"\PokemonTables");
+            string[] files = Directory.GetFiles(path);
             List<string> pokemonListPaths = new List<string>();
-            foreach(var file in files)
+            foreach (var file in files)
             {
                 if (file.EndsWith(".json"))
                     pokemonListPaths.Add(file);
             }
 
-            foreach(var pokemonListPath in pokemonListPaths)
+            foreach (var pokemonListPath in pokemonListPaths)
             {
-                List<GeneralPokemon> temp = new List<GeneralPokemon>();
+                List<GeneralE> temp = new List<GeneralE>();
                 string json = string.Empty;
                 using (StreamReader sr = new StreamReader(pokemonListPath))
                 {
@@ -39,9 +43,9 @@ namespace CorviknightCalk
                     {
                         json += line;
                     }
-                    temp = JsonConvert.DeserializeObject<List<GeneralPokemon>>(json);
+                    temp = JsonConvert.DeserializeObject<List<GeneralE>>(json);
                 }
-                foreach(var pokemon in temp)
+                foreach (var pokemon in temp)
                 {
                     pokemons.Add(pokemon);
                 }
@@ -69,21 +73,20 @@ namespace CorviknightCalk
             return result;
         }
 
-
-        public GeneralPokemon GetPokemon(int iD, int regionID)
+        public GeneralE GetPokemon(int iD, int regionID)
         {
             for (int i = 0; i < pokemons.Count; i++)
                 if (pokemons[i].ID == iD && pokemons[i].RegionID == regionID)
                     return pokemons[i];
-            return new GeneralPokemon();
+            return new GeneralE();
         }
 
-        public GeneralPokemon GetPokemon(string Name)
+        public GeneralE GetPokemon(string Name)
         {
             for (int i = 0; i < pokemons.Count; i++)
                 if (pokemons[i].Name == Name)
                     return pokemons[i];
-            return new GeneralPokemon();
+            return new GeneralE();
         }
     }
 }

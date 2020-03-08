@@ -7,18 +7,33 @@
              xmlns:panel="clr-namespace:CorviknightCalk"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CorviknightCalk;component/UserInterface/Style/BaseRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid Name="pokemonTeamGrid">
-        <Label Content="Team" FontFamily="Franklin Gothic Demi" FontSize="48" HorizontalAlignment="Center"/>
+        <Label Content="Team" FontFamily="Franklin Gothic Demi" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel.Resources>
                 <Style TargetType="panel:PokemonPreviewUC">
-                    <Setter Property="Margin" Value="20"/>
+                    <Setter Property="Margin" Value="20,10"/>
                 </Style>
             </StackPanel.Resources>
             <StackPanel Name="StackPanelLeft">
             </StackPanel>
             <StackPanel Name="StackPanelRight">
             </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="50" Width="auto" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10">
+            <Button Width="100" Margin="5" HorizontalAlignment="Center" Click="btnSave_Click">
+                <Label Style="{StaticResource MenuLabel}" Foreground="Black">Save</Label>
+            </Button>
+            <Button Width="100" Margin="5" HorizontalAlignment="Center" Click="btnLoad_Click">
+                <Label Style="{StaticResource MenuLabel}" Foreground="Black">Load</Label>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

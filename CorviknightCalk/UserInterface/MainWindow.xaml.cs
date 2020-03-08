@@ -29,7 +29,8 @@ namespace CorviknightCalk
         {
             
             InitializeComponent();
-            ParticularPokemon[] pokemon = new ParticularPokemon[6];
+            ParticularE[] pokemon = new ParticularE[6];
+            for (int i = 0; i < pokemon.Length; i++) pokemon[i] = new ParticularE();
 
             //sollte ich noch umbennen das "btn am anfang könnte verwirren"
             //Sets the button Icons

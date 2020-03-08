@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace CorviknightCalk.PokemonEntity
 {
-    public class GeneralPokemon : INotifyPropertyChanged
+    public class GeneralE : INotifyPropertyChanged
     {
         private int id;
         public int ID
@@ -103,7 +103,7 @@ namespace CorviknightCalk.PokemonEntity
 
         public ObservableCollection<int> AbilityIDs { get; set; }
         public ObservableCollection<int> MoveIDs { get; set; }
-        public ObservableCollection<GeneralPokemonStats> Stats { get; set; }
+        public ObservableCollection<GeneralEStats> Stats { get; set; }
 
 
 
@@ -127,7 +127,7 @@ namespace CorviknightCalk.PokemonEntity
         }
     }
 
-    public class GeneralPokemonStats : INotifyPropertyChanged
+    public class GeneralEStats : INotifyPropertyChanged
     {
         private int baseValue;
         public int BaseValue { get { return baseValue; }

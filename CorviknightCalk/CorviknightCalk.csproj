@@ -74,16 +74,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="PokemonEntity\ParticularPokemon.cs" />
-    <Compile Include="PokemonEntity\GeneralPokemon.cs" />
+    <Compile Include="PokemonEntity\ParticularE.cs" />
+    <Compile Include="PokemonEntity\GeneralE.cs" />
+    <Compile Include="PokemonEntity\SaveE.cs" />
+    <Compile Include="Tables\AbilitiesT.cs" />
+    <Compile Include="Tables\ItemsT.cs" />
+    <Compile Include="Tables\MovesT.cs" />
     <Compile Include="UserInterface\Tabs\Team\PokemonDesignerW.xaml.cs">
       <DependentUpon>PokemonDesignerW.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\Tabs\Team\PokemonPreviewUC.xaml.cs">
       <DependentUpon>PokemonPreviewUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tables\PokemonTable.cs" />
-    <Compile Include="Tables\PokemonTypes.cs" />
+    <Compile Include="Tables\EntitiesT.cs" />
+    <Compile Include="Tables\TypesT.cs" />
     <Compile Include="UserInterface\Tabs\Team\TeamPage.xaml.cs">
       <DependentUpon>TeamPage.xaml</DependentUpon>
     </Compile>
@@ -162,7 +166,6 @@
   <ItemGroup>
     <Folder Include="UserInterface\Tabs\Matchups\" />
     <Folder Include="UserInterface\Tabs\Stats\" />
-    <Folder Include="UserInterface\Tabs\Team\PokemonDesigner\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

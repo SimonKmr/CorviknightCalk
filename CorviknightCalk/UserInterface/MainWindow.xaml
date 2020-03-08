@@ -87,7 +87,7 @@
             </TabControl>
         </DockPanel>
         <!-- Exit Button -->
-        <Button Background="Transparent" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0" Click="btnExit_Click">
+        <Button Background="Transparent" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0" Click="btnExit_Click">
             <Image Name="Icon_btnExit" Height="23" Stretch="Uniform" RenderTransformOrigin="0.517,0.483"></Image>
         </Button>
     </Grid>

@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace PokeCalk.PokemonTypeTable
 {
-    class PokemonTypes
+    class TypesT
     {
         public static int TypeCount { get; set; } = 18;
 
@@ -26,7 +26,7 @@ namespace PokeCalk.PokemonTypeTable
         { LightningRod, MotorDrive, VoltAbsorb, FlashFire, WaterAbsorb, StormDrain, DrySkin, Levitate, SapSipper, NoPassiveImmunity}
 
         //Attacker Defender https://bulbapedia.bulbagarden.net/wiki/Type
-        public PokemonTypes()
+        public TypesT()
         {
             //loads the typeTable
             string json = string.Empty;
